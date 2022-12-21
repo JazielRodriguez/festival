@@ -4,15 +4,19 @@ import { festivalIsTypewriter } from '../utils/typewriterWords'
 import { useDownloadImage } from '../hooks/useDownloadImage'
 import { SpinnerCircular } from 'spinners-react'
 import styles from './Introduction.module.css'
-import IntroductionCarousel from './IntroductionCarousel'
+import IntroductionGallery from './IntroductionGallery'
 const Introduction: React.FC = () => {
   const { imageUrl, loading } = useDownloadImage([
+    'concert-image-one.webp',
     'concert-image-two.webp',
-    'festival-home.webp'
+    'concert-image-three.webp',
+    'concert-image-four.webp',
+    'concert-image-five.webp',
+    'concert-image-six.webp'
   ])
   return (
     <div className={styles.introduction}>
-      <div>
+      <div className={styles.legend}>
         <h1>
           Festival is{' '}
           <span
@@ -26,9 +30,9 @@ const Introduction: React.FC = () => {
           </span>
         </h1>
       </div>
-      <div>
+      <div className={styles['carousel-container']}>
         {loading && <SpinnerCircular color='#000' size={100} />}
-        {!loading && <IntroductionCarousel images={imageUrl} />}
+        {!loading && <IntroductionGallery images={imageUrl} />}
       </div>
     </div>
   )

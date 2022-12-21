@@ -4,6 +4,6 @@ export interface ImageProps {
   width: string
   height: string
 }
-export interface IntroductionCarouselProps {
+export interface IntroductionGalleryProps {
   images: string[] | undefined
 }
