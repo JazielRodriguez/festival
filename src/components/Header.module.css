@@ -1,0 +1,25 @@
+.header {
+  padding: 2rem 0;
+  background: rgb(53, 45, 55);
+  background: linear-gradient(
+    90deg,
+    rgba(53, 45, 55, 1) 25%,
+    rgba(71, 55, 77, 1) 75%
+  );
+  border-radius: 0 0 24px 24px;
+}
+.content {
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #fff;
+}
+.content h2 {
+  text-decoration: underline transparent;
+  transition: text-decoration 0.4s ease;
+}
+.content h2:hover {
+  text-decoration: underline #fff;
+}
